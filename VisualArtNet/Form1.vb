@@ -7,7 +7,7 @@
 
     Private Sub WebBrowserD_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserD.Navigating
         If String.IsNullOrEmpty(e.TargetFrameName) Then
-            If Not e.Url.AbsolutePath = "/notifications/" Then
+            If Not e.Url.Host.StartsWith("www") Then
                 e.Cancel = True
                 WebBrowser1.Url = e.Url
             End If
