@@ -15,10 +15,6 @@
     End Sub
 
     Private Sub WebBrowserF_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserF.Navigating
-        If e.Url.Host.Contains("betrad.com") Or e.Url.Host.Contains("doubleclick.net") Then
-            e.Cancel = True
-            Return
-        End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
             If Not e.Url.AbsolutePath.StartsWith("/msg") Then
                 e.Cancel = True
@@ -41,6 +37,10 @@
     End Sub
 
     Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
+        If e.Url.Host.Contains("betrad.com") Or e.Url.Host.Contains("doubleclick.net") Then
+            e.Cancel = True
+            Return
+        End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
             TextBox1.Text = e.Url.AbsoluteUri
         End If
