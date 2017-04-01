@@ -144,7 +144,7 @@ Partial Class Form1
         Me.Controls.Add(Me.BrawlSplitter1)
         Me.Controls.Add(Me.WebBrowserD)
         Me.Name = "Form1"
-        Me.Text = "Visual Art.NET"
+        Me.Text = "Visual Art.NET 1.0"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
