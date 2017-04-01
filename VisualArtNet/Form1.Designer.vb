@@ -26,6 +26,9 @@ Partial Class Form1
         Me.WebBrowserF = New System.Windows.Forms.WebBrowser()
         Me.WebBrowserW = New System.Windows.Forms.WebBrowser()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.BrawlSplitter3 = New VisualArtNet.BrawlSplitter()
+        Me.BrawlSplitter2 = New VisualArtNet.BrawlSplitter()
+        Me.BrawlSplitter1 = New VisualArtNet.BrawlSplitter()
         Me.SuspendLayout()
         '
         'WebBrowserD
@@ -40,29 +43,57 @@ Partial Class Form1
         'WebBrowserF
         '
         Me.WebBrowserF.Dock = System.Windows.Forms.DockStyle.Left
-        Me.WebBrowserF.Location = New System.Drawing.Point(0, 250)
+        Me.WebBrowserF.Location = New System.Drawing.Point(0, 259)
         Me.WebBrowserF.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserF.Name = "WebBrowserF"
-        Me.WebBrowserF.Size = New System.Drawing.Size(300, 338)
+        Me.WebBrowserF.Size = New System.Drawing.Size(300, 329)
         Me.WebBrowserF.TabIndex = 1
         '
         'WebBrowserW
         '
         Me.WebBrowserW.Dock = System.Windows.Forms.DockStyle.Left
-        Me.WebBrowserW.Location = New System.Drawing.Point(300, 250)
+        Me.WebBrowserW.Location = New System.Drawing.Point(309, 259)
         Me.WebBrowserW.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserW.Name = "WebBrowserW"
-        Me.WebBrowserW.Size = New System.Drawing.Size(300, 338)
+        Me.WebBrowserW.Size = New System.Drawing.Size(300, 329)
         Me.WebBrowserW.TabIndex = 2
         '
         'WebBrowser1
         '
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(600, 250)
+        Me.WebBrowser1.Location = New System.Drawing.Point(618, 259)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(57, 338)
+        Me.WebBrowser1.Size = New System.Drawing.Size(39, 329)
         Me.WebBrowser1.TabIndex = 3
+        '
+        'BrawlSplitter3
+        '
+        Me.BrawlSplitter3.ControlToHide = Me.WebBrowserW
+        Me.BrawlSplitter3.Location = New System.Drawing.Point(609, 259)
+        Me.BrawlSplitter3.Name = "BrawlSplitter3"
+        Me.BrawlSplitter3.Size = New System.Drawing.Size(9, 329)
+        Me.BrawlSplitter3.TabIndex = 6
+        Me.BrawlSplitter3.TabStop = False
+        '
+        'BrawlSplitter2
+        '
+        Me.BrawlSplitter2.ControlToHide = Me.WebBrowserF
+        Me.BrawlSplitter2.Location = New System.Drawing.Point(300, 259)
+        Me.BrawlSplitter2.Name = "BrawlSplitter2"
+        Me.BrawlSplitter2.Size = New System.Drawing.Size(9, 329)
+        Me.BrawlSplitter2.TabIndex = 5
+        Me.BrawlSplitter2.TabStop = False
+        '
+        'BrawlSplitter1
+        '
+        Me.BrawlSplitter1.ControlToHide = Me.WebBrowserD
+        Me.BrawlSplitter1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.BrawlSplitter1.Location = New System.Drawing.Point(0, 250)
+        Me.BrawlSplitter1.Name = "BrawlSplitter1"
+        Me.BrawlSplitter1.Size = New System.Drawing.Size(657, 9)
+        Me.BrawlSplitter1.TabIndex = 4
+        Me.BrawlSplitter1.TabStop = False
         '
         'Form1
         '
@@ -70,8 +101,11 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(657, 588)
         Me.Controls.Add(Me.WebBrowser1)
+        Me.Controls.Add(Me.BrawlSplitter3)
         Me.Controls.Add(Me.WebBrowserW)
+        Me.Controls.Add(Me.BrawlSplitter2)
         Me.Controls.Add(Me.WebBrowserF)
+        Me.Controls.Add(Me.BrawlSplitter1)
         Me.Controls.Add(Me.WebBrowserD)
         Me.Name = "Form1"
         Me.Text = "Visual Art.NET"
@@ -83,4 +117,7 @@ Partial Class Form1
     Friend WithEvents WebBrowserF As WebBrowser
     Friend WithEvents WebBrowserW As WebBrowser
     Friend WithEvents WebBrowser1 As WebBrowser
+    Friend WithEvents BrawlSplitter1 As BrawlSplitter
+    Friend WithEvents BrawlSplitter2 As BrawlSplitter
+    Friend WithEvents BrawlSplitter3 As BrawlSplitter
 End Class
