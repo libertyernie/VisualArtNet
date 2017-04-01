@@ -26,7 +26,7 @@
             Return
         End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
-            If Not e.Url.AbsolutePath.StartsWith("/msg") Then
+            If e.Url.Host.EndsWith("furaffinity.net") And Not e.Url.AbsolutePath.StartsWith("/msg") Then
                 e.Cancel = True
                 WebBrowser1.Url = e.Url
             End If
@@ -38,7 +38,7 @@
             WebBrowserW.Visible = False
             Return
         End If
-        If String.IsNullOrEmpty(e.TargetFrameName) Then
+        If e.Url.Host.EndsWith("weasyl.com") And String.IsNullOrEmpty(e.TargetFrameName) Then
             If e.Url.AbsolutePath.StartsWith("/~") Then
                 e.Cancel = True
                 WebBrowser1.Url = e.Url
@@ -51,12 +51,10 @@
     End Sub
 
     Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
-        If e.Url.Host.EndsWith("betrad.com") Or e.Url.Host.EndsWith("doubleclick.net") Or e.Url.Host.EndsWith("googlesyndication.com") Then
-            e.Cancel = True
-            Return
-        End If
-        If String.IsNullOrEmpty(e.TargetFrameName) And e.Url.Scheme <> "javascript" Then
-            TextBox1.Text = e.Url.AbsoluteUri
+        If Not e.Url.Host.EndsWith("betrad.com") And Not e.Url.Host.EndsWith("doubleclick.net") Or e.Url.Host.EndsWith("googlesyndication.com") Then
+            If String.IsNullOrEmpty(e.TargetFrameName) And e.Url.Scheme <> "javascript" Then
+                TextBox1.Text = e.Url.AbsoluteUri
+            End If
         End If
     End Sub
 
