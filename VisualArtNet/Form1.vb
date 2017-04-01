@@ -1,6 +1,4 @@
-﻿Imports Microsoft.Win32
-
-Public Class Form1
+﻿Public Class Form1
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         WebBrowserD.Url = New Uri("https://www.deviantart.com/notifications/")
         WebBrowserF.Url = New Uri("https://sfw.furaffinity.net/msg/submissions/")
