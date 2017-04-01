@@ -6,6 +6,10 @@
     End Sub
 
     Private Sub WebBrowserD_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserD.Navigating
+        If e.Url.Scheme = "res" Then
+            WebBrowserD.Visible = False
+            Return
+        End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
             If Not e.Url.Host.StartsWith("www") Then
                 e.Cancel = True
@@ -15,6 +19,10 @@
     End Sub
 
     Private Sub WebBrowserF_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserF.Navigating
+        If e.Url.Scheme = "res" Then
+            WebBrowserF.Visible = False
+            Return
+        End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
             If Not e.Url.AbsolutePath.StartsWith("/msg") Then
                 e.Cancel = True
@@ -24,6 +32,10 @@
     End Sub
 
     Private Sub WebBrowserW_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserW.Navigating
+        If e.Url.Scheme = "res" Then
+            WebBrowserW.Visible = False
+            Return
+        End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
             If e.Url.AbsolutePath.StartsWith("/~") Then
                 e.Cancel = True
@@ -37,11 +49,11 @@
     End Sub
 
     Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
-        If e.Url.Host.Contains("betrad.com") Or e.Url.Host.Contains("doubleclick.net") Then
+        If e.Url.Host.EndsWith("betrad.com") Or e.Url.Host.EndsWith("doubleclick.net") Or e.Url.Host.EndsWith("googlesyndication.com") Then
             e.Cancel = True
             Return
         End If
-        If String.IsNullOrEmpty(e.TargetFrameName) Then
+        If String.IsNullOrEmpty(e.TargetFrameName) And e.Url.Scheme <> "javascript" Then
             TextBox1.Text = e.Url.AbsoluteUri
         End If
     End Sub

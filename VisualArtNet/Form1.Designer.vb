@@ -41,6 +41,7 @@ Partial Class Form1
         Me.WebBrowserD.Location = New System.Drawing.Point(0, 0)
         Me.WebBrowserD.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserD.Name = "WebBrowserD"
+        Me.WebBrowserD.ScriptErrorsSuppressed = True
         Me.WebBrowserD.Size = New System.Drawing.Size(784, 250)
         Me.WebBrowserD.TabIndex = 0
         '
@@ -50,6 +51,7 @@ Partial Class Form1
         Me.WebBrowserF.Location = New System.Drawing.Point(0, 259)
         Me.WebBrowserF.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserF.Name = "WebBrowserF"
+        Me.WebBrowserF.ScriptErrorsSuppressed = True
         Me.WebBrowserF.Size = New System.Drawing.Size(300, 302)
         Me.WebBrowserF.TabIndex = 1
         '
@@ -59,6 +61,7 @@ Partial Class Form1
         Me.WebBrowserW.Location = New System.Drawing.Point(484, 259)
         Me.WebBrowserW.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserW.Name = "WebBrowserW"
+        Me.WebBrowserW.ScriptErrorsSuppressed = True
         Me.WebBrowserW.Size = New System.Drawing.Size(300, 302)
         Me.WebBrowserW.TabIndex = 2
         '
@@ -68,6 +71,7 @@ Partial Class Form1
         Me.WebBrowser1.Location = New System.Drawing.Point(309, 283)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(166, 278)
         Me.WebBrowser1.TabIndex = 3
         '
