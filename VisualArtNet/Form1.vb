@@ -1,20 +1,22 @@
 ﻿Public Class Form1
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         WebBrowserD.Url = New Uri("https://www.deviantart.com/notifications/")
-        WebBrowserF.Url = New Uri("https://sfw.furaffinity.net/msg/submissions/")
+        WebBrowserF.Url = New Uri("https://www.furaffinity.net/msg/submissions/")
         WebBrowserW.Url = New Uri("https://www.weasyl.com/messages/submissions")
     End Sub
 
     Private Sub WebBrowserD_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserD.Navigating
+        Console.WriteLine(e.Url)
         If e.Url.Scheme = "res" Then
             WebBrowserD.Visible = False
             Return
         End If
-        If String.IsNullOrEmpty(e.TargetFrameName) Then
-            If Not e.Url.Host.StartsWith("www") Then
-                e.Cancel = True
-                WebBrowser1.Url = e.Url
-            End If
+    End Sub
+
+    Private Sub WebBrowserD_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowserD.Navigated
+        If e.Url.Host.EndsWith("deviantart.com") And e.Url.AbsolutePath <> "/notifications/" Then
+            WebBrowser1.Url = e.Url
+            WebBrowserD.Url = New Uri("https://www.deviantart.com/notifications/")
         End If
     End Sub
 
