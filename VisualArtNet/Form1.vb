@@ -21,10 +21,6 @@
     End Sub
 
     Private Sub WebBrowserF_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserF.Navigating
-        If e.Url.Scheme = "res" Then
-            WebBrowserF.Visible = False
-            Return
-        End If
         If String.IsNullOrEmpty(e.TargetFrameName) Then
             If e.Url.Host.EndsWith("furaffinity.net") And Not e.Url.AbsolutePath.StartsWith("/msg") Then
                 e.Cancel = True
@@ -34,12 +30,9 @@
     End Sub
 
     Private Sub WebBrowserW_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowserW.Navigating
-        If e.Url.Scheme = "res" Then
-            WebBrowserW.Visible = False
-            Return
-        End If
+        Console.WriteLine(e.Url.ToString & " " & e.TargetFrameName)
         If e.Url.Host.EndsWith("weasyl.com") And String.IsNullOrEmpty(e.TargetFrameName) Then
-            If e.Url.AbsolutePath.StartsWith("/~") Then
+            If Not e.Url.AbsolutePath.StartsWith("/messages") Then
                 e.Cancel = True
                 WebBrowser1.Url = e.Url
             End If

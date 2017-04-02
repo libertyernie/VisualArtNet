@@ -42,37 +42,37 @@ Partial Class Form1
         Me.WebBrowserD.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserD.Name = "WebBrowserD"
         Me.WebBrowserD.ScriptErrorsSuppressed = True
-        Me.WebBrowserD.Size = New System.Drawing.Size(942, 250)
+        Me.WebBrowserD.Size = New System.Drawing.Size(942, 300)
         Me.WebBrowserD.TabIndex = 0
         '
         'WebBrowserF
         '
         Me.WebBrowserF.Dock = System.Windows.Forms.DockStyle.Left
-        Me.WebBrowserF.Location = New System.Drawing.Point(0, 259)
+        Me.WebBrowserF.Location = New System.Drawing.Point(0, 309)
         Me.WebBrowserF.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserF.Name = "WebBrowserF"
         Me.WebBrowserF.ScriptErrorsSuppressed = True
-        Me.WebBrowserF.Size = New System.Drawing.Size(300, 314)
+        Me.WebBrowserF.Size = New System.Drawing.Size(300, 264)
         Me.WebBrowserF.TabIndex = 1
         '
         'WebBrowserW
         '
         Me.WebBrowserW.Dock = System.Windows.Forms.DockStyle.Right
-        Me.WebBrowserW.Location = New System.Drawing.Point(642, 259)
+        Me.WebBrowserW.Location = New System.Drawing.Point(642, 309)
         Me.WebBrowserW.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowserW.Name = "WebBrowserW"
         Me.WebBrowserW.ScriptErrorsSuppressed = True
-        Me.WebBrowserW.Size = New System.Drawing.Size(300, 314)
+        Me.WebBrowserW.Size = New System.Drawing.Size(300, 264)
         Me.WebBrowserW.TabIndex = 2
         '
         'WebBrowser1
         '
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(309, 283)
+        Me.WebBrowser1.Location = New System.Drawing.Point(309, 333)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.ScriptErrorsSuppressed = True
-        Me.WebBrowser1.Size = New System.Drawing.Size(324, 290)
+        Me.WebBrowser1.Size = New System.Drawing.Size(324, 240)
         Me.WebBrowser1.TabIndex = 3
         '
         'Panel1
@@ -80,7 +80,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(309, 259)
+        Me.Panel1.Location = New System.Drawing.Point(309, 309)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(324, 24)
         Me.Panel1.TabIndex = 7
@@ -109,18 +109,18 @@ Partial Class Form1
         '
         Me.BrawlSplitter3.ControlToHide = Me.WebBrowserW
         Me.BrawlSplitter3.Dock = System.Windows.Forms.DockStyle.Right
-        Me.BrawlSplitter3.Location = New System.Drawing.Point(633, 259)
+        Me.BrawlSplitter3.Location = New System.Drawing.Point(633, 309)
         Me.BrawlSplitter3.Name = "BrawlSplitter3"
-        Me.BrawlSplitter3.Size = New System.Drawing.Size(9, 314)
+        Me.BrawlSplitter3.Size = New System.Drawing.Size(9, 264)
         Me.BrawlSplitter3.TabIndex = 6
         Me.BrawlSplitter3.TabStop = False
         '
         'BrawlSplitter2
         '
         Me.BrawlSplitter2.ControlToHide = Me.WebBrowserF
-        Me.BrawlSplitter2.Location = New System.Drawing.Point(300, 259)
+        Me.BrawlSplitter2.Location = New System.Drawing.Point(300, 309)
         Me.BrawlSplitter2.Name = "BrawlSplitter2"
-        Me.BrawlSplitter2.Size = New System.Drawing.Size(9, 314)
+        Me.BrawlSplitter2.Size = New System.Drawing.Size(9, 264)
         Me.BrawlSplitter2.TabIndex = 5
         Me.BrawlSplitter2.TabStop = False
         '
@@ -128,7 +128,7 @@ Partial Class Form1
         '
         Me.BrawlSplitter1.ControlToHide = Me.WebBrowserD
         Me.BrawlSplitter1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.BrawlSplitter1.Location = New System.Drawing.Point(0, 250)
+        Me.BrawlSplitter1.Location = New System.Drawing.Point(0, 300)
         Me.BrawlSplitter1.Name = "BrawlSplitter1"
         Me.BrawlSplitter1.Size = New System.Drawing.Size(942, 9)
         Me.BrawlSplitter1.TabIndex = 4
@@ -148,7 +148,7 @@ Partial Class Form1
         Me.Controls.Add(Me.BrawlSplitter1)
         Me.Controls.Add(Me.WebBrowserD)
         Me.Name = "Form1"
-        Me.Text = "Visual Art.NET 1.0"
+        Me.Text = "Visual Art.NET 1.1"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
