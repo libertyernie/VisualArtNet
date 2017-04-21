@@ -98,6 +98,8 @@ Public Class BrawlSplitter
         AddHandler Me.Resize, AddressOf BrawlSplitter_Resize
         AddHandler Me.Button.Click, AddressOf Button_Click
         AddHandler Me.Button.Paint, AddressOf Button_Paint
+
+        AddHandler Me.VisibleChanged, AddressOf BrawlSplitter_Resize
     End Sub
 
     Private Sub BrawlSplitter_MouseEnter(sender As Object, e As EventArgs)
@@ -196,15 +198,8 @@ Public Class BrawlSplitter
             Dim middle As Integer = Me.Width / 2
             e.Graphics.DrawLine(pen, middle, 0, middle, Me.Height)
             e.Graphics.DrawLine(pen2, middle - 1, 0, middle - 1, Me.Height)
-            ' square - do nothing
         Else
+            ' square - do nothing
         End If
     End Sub
 End Class
-
-'=======================================================
-'Service provided by Telerik (www.telerik.com)
-'Conversion powered by NRefactory.
-'Twitter: @telerik
-'Facebook: facebook.com/telerik
-'=======================================================
